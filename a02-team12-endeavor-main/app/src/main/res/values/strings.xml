@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CookMate</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cook">CookMate: Cook</string>
+    <string name="title_activity_recipe">CookMate: Recipes</string>
+    <string name="title_activity_cook_recipe">CookMate: Recipe viewing History</string>
+    <string name="title_activity_recipe_cook">CookMate: Cook adding Recipes</string>
+    <string name="cooks">Cooks</string>
+    <string name="recipes">Recipes</string>
+    <string name="registrations">Registrations</string>
+    <string name="create">Create</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="cook_id">Cook ID</string>
+    <string name="recipe_id">Recipe ID</string>
+    <string name="fatalError">Fatal error</string>
+    <string name="warning">Warning</string>
+    <string name="logo">Logo</string>
+</resources>

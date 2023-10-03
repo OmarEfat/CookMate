@@ -1,0 +1,33 @@
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE MEMORY TABLE PUBLIC.COOK(USERID VARCHAR(20) NOT NULL PRIMARY KEY,USERNAME VARCHAR(20),PASSWORD VARCHAR(64),PREFERREDNAME VARCHAR(20),DIETARYRESTRICTIONS VARCHAR(100))
+CREATE TABLE PUBLIC.Ingredient (name VARCHAR(50) PRIMARY KEY, incompatibleRestrictions VARCHAR(500))
+CREATE TABLE PUBLIC.Recipe(name VARCHAR(50) NOT NULL, image INT NOT NULL, category VARCHAR(50) NOT NULL, cookingLvl VARCHAR(50) NOT NULL, prepTime INT NOT NULL, cookingTime INT NOT NULL, numOfServing INT NOT NULL, showSteps VARCHAR(50) NOT NULL, PRIMARY KEY(name))
+CREATE TABLE PUBLIC.RecipeForCook(userID VARCHAR(100), name VARCHAR(50) NOT NULL, image INT NOT NULL, category VARCHAR(50) NOT NULL, cookingLvl VARCHAR(50) NOT NULL, prepTime INT NOT NULL, cookingTime INT NOT NULL, numOfServing INT NOT NULL, showSteps VARCHAR(50) NOT NULL, PRIMARY KEY(name,userID))
+CREATE TABLE PUBLIC.RecipeIngredient(recipeName VARCHAR(50) NOT NULL, ingredientName VARCHAR(50) NOT NULL, FOREIGN KEY(recipeName) REFERENCES Recipe(name) ON DELETE CASCADE, FOREIGN KEY(ingredientName) REFERENCES Ingredient(name) ON DELETE CASCADE)
+CREATE TABLE PUBLIC.RecipeIngredientForCook(userID VARCHAR(50), recipeName VARCHAR(50) NOT NULL, ingredientName VARCHAR(50) NOT NULL, FOREIGN KEY(recipeName) REFERENCES Recipe(name) ON DELETE CASCADE, FOREIGN KEY(ingredientName) REFERENCES Ingredient(name) ON DELETE CASCADE, FOREIGN KEY(userId) REFERENCES Cook(userID) ON DELETE CASCADE)
+CREATE TABLE PUBLIC.CookRecipe(userId VARCHAR(20) NOT NULL, recipeName VARCHAR(50) NOT NULL, PRIMARY KEY(userId, recipeName), FOREIGN KEY(userId) REFERENCES Cook(userId) ON DELETE CASCADE, FOREIGN KEY(recipeName) REFERENCES Recipe(name) ON DELETE CASCADE)
+CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
+ALTER USER SA SET LOCAL TRUE
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+SET DATABASE DEFAULT INITIAL SCHEMA PUBLIC
+GRANT DBA TO SA
+SET WRITE_DELAY 20
+SET FILES SCALE 32
+SET SCHEMA PUBLIC
+INSERT INTO COOK VALUES('tahao','Omar Taha','1023' , 'Mero Mero' , 'Everything that's good')
+INSERT INTO Recipe VALUES('Koshary', 0, 'Bakery', 'Medium', 5, 40, 3, 'Steps')
+INSERT INTO CookRecipe VALUES('tahao', 'Koshary')
+INSERT INTO Recipe VALUES('Beer Bread', 2131165280, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Japanese Chicken', 2131165305, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Banana Bread', 2131165278, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Banana Cake', 2131165279, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Bourbon Chicken', 2131165282, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Chocolate Cake', 2131165280, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO Recipe VALUES('Oreo Balls', 2131165323, 'Bakery', 'Medium', 5, 40, 3, 'Steps');
+INSERT INTO CookRecipe VALUES('tahao', 'Beer Bread');
+INSERT INTO CookRecipe VALUES('tahao', 'Japanese Chicken');
+INSERT INTO CookRecipe VALUES('tahao', 'Banana Bread');
+INSERT INTO CookRecipe VALUES('tahao', 'Banana Cake');
+INSERT INTO CookRecipe VALUES('tahao', 'Bourbon Chicken');
+INSERT INTO CookRecipe VALUES('tahao', 'Chocolate Cake');
+INSERT INTO CookRecipe VALUES('tahao', 'Oreo Balls');

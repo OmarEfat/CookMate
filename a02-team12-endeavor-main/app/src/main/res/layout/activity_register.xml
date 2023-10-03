@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/logo"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,ObsoleteLayoutParam" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_name_edit_text"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User ID (Unchangeable)"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/full_name_edit_text"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/user_dietary_restriction_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:padding="12dp">
+
+            <!-- text view to display selected items-->
+            <TextView
+                android:id="@+id/user_dietary_restriction_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                android:hint="Dietary Restrictions"
+                android:padding="12dp" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:background="#357CD3"
+            android:padding="12dp"
+            android:text="Register"
+            tools:ignore="VisualLintButtonSize" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

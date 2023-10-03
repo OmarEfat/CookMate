@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:src="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="Logo"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter your desired name and/or password"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.1"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/note_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: This will only change your name shown in the top right when logged in."
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold|italic"
+            android:textSize="10sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/full_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="new Full Name"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="new Password"
+                android:inputType="textPassword"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_dietary_restriction_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:padding="12dp">
+
+            <!-- text view to display selected items-->
+            <TextView
+                android:id="@+id/user_dietary_restriction_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                android:hint="Dietary Restrictions"
+                android:padding="12dp" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:background="#357CD3"
+            android:padding="12dp"
+            android:text="Submit"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:background="#FF0000"
+            android:text="DELETE ACCOUNT"
+            android:textColor="#000000"
+            tools:ignore="VisualLintButtonSize" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

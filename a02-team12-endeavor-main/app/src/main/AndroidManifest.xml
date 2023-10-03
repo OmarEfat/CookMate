@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="comp3350.CookMate.presentation.HomeActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="comp3350.CookMate.presentation.RegisterActivity" />
+        <activity android:name="comp3350.CookMate.presentation.RecipeActivity" />
+        <activity android:name="comp3350.CookMate.presentation.UpdateAccountActivity" />
+        <activity android:name="comp3350.CookMate.presentation.AddRecipeActivity" />
+        <activity android:name="comp3350.CookMate.presentation.AddIngredientActivity" />
+        <activity android:name="comp3350.CookMate.presentation.RecipePageActivity" />
+        <activity android:name="comp3350.CookMate.presentation.SearchActivity" />
+
+        <activity
+            android:name="comp3350.CookMate.presentation.LoginActivity"
+            android:label="@string/title_activity_cook" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.CookMate.presentation.HomeActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

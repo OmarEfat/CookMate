@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Recipe details -->
+
+    <ImageView
+        android:id="@+id/recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="Recipe Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banana_bread"
+        tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck,MissingConstraints,VisualLintBounds" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="441dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_image"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="MissingConstraints,VisualLintBounds">
+
+        <!-- Recipe Name -->
+        <TextView
+            android:id="@+id/recipe_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Name: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+        <!-- Recipe category -->
+        <TextView
+            android:id="@+id/recipe_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Category: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+
+        <!-- Recipe difficulty -->
+        <TextView
+            android:id="@+id/recipe_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Difficulty: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+        <!-- Recipe perparation time -->
+        <TextView
+            android:id="@+id/recipe_prep_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Preparation time: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+
+        <!-- Recipe cooking time -->
+        <TextView
+            android:id="@+id/recipe_cooking_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Cooking time: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recipe_servings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="Servings:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/recipe_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="List of ingredients:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+
+        <!-- Recipe steps -->
+        <TextView
+            android:id="@+id/recipe_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:text="List of steps:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

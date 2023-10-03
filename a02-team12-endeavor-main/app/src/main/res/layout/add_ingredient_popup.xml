@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editText_ingredient_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingredient Name"/>
+
+    <RelativeLayout
+        android:id="@+id/user_dietary_restriction_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp">
+
+        <!-- text view to display selected items-->
+        <TextView
+            android:id="@+id/user_dietary_restriction_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:hint="Dietary Restrictions"
+            android:padding="12dp" />
+
+        <!-- EditText for dietary restrictions -->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/button_add_ingredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#357CD3"
+            android:layout_marginRight="20dp"
+            android:text="Add Ingredient"/>
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#357CD3"
+            android:text="Cancel"/>
+
+    </LinearLayout>
+
+</LinearLayout>
